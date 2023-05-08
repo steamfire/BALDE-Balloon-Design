@@ -1,7 +1,8 @@
 # BALDE-Balloon-Design
 Zero Pressure Balloon design program in FORTRAN IVX, orig by James Rand, 1978
 
-Adapted to run on the [CDC 6500 mainframe in FORTRAN IV Extended at Living Computer Museum](https://wiki.livingcomputers.org/doku.php?id=cdc6500_survival_guide).
+Adapted to run on the [CDC 6500 mainframe in FORTRAN IV Extended at Living Computer Museum](https://wiki.livingcomputers.org/doku.php?id=cdc6500_survival_guide).  The computer is remotely 
+terminal accessible via the link, where the code can be run.
 
     C*******************************************************************
     C                            -B A L D E-
@@ -19,6 +20,7 @@ Adapted to run on the [CDC 6500 mainframe in FORTRAN IV Extended at Living Compu
     C*******************************************************************
     
     
-Code listing from J. L. Rand, “Design and Analysis of Single Cell Balloons,” 1978, p. 80. doi: 10.21236/ada072828.
+Code listing from J. L. Rand, “Design and Analysis of Single Cell Balloons,” 1978, 
+p. 80. doi: 10.21236/ada072828.
 PDF of full paper + appendix of code is included
   
