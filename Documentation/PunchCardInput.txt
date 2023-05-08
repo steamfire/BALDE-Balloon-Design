@@ -1,0 +1,58 @@
+Example code that does compile on FORTRAN FTNTS on CDC-6500:
+
+       PROGRAM BALYAY1 (INPUT,OUTPUT,TAPE5=INPUT,TAPE6=OUTPUT)
+       REAL K,KT,KTAPE,LAMBDA,IAM 
+       INTEGER CODEF,CODET
+       DIMENSION GP (100),GW(100),GWT(100),GT(100)
+100    WRITE (6,600) 
+600    FORMAT(*1*)
+       READ(5,500) P,KEY,CONST,CODEF,FTHICK,CODET,TLR,NT 
+500    FORMAT(F10.0,I10,F10.0,I10,F10.4,I10,F10.0,I10) 
+       READ(5,501) TL,TAU0,TAU1,ALPHA,N,DSO,CSTART,CAP
+501    FORMAT(F10.2,F10.2,F10.2,F10.2,I10,F10.2,F10.2,F10.4) 
+       STOP
+       END
+        
+        
+ Punch card input       
+ Page 63 and 64 list the column positions - this was invaluable. just put the characters in the right columns as on the 80 column card when the program gives you the ? prompt.
+
+C    ALL DATA ARE READ IN 10 WIDE FIELDS OF THE APPROPRIATE TYPE. 
+C      1 "FIRST" CARD INPUTS ARE AS FOLLOWS:
+C           PAYLOAD IN POUNDS 
+C           ALTITUDE OPTION: 1 = ALT IN FT, 2 = ALT IN MB
+C           ALTITUDE IN FEET OR MILLIBARS AS DESIRED
+C           FILM TYPE: 1 = POLYETHYLENE, 2 = MYLAR 
+C           FILM THICKNESS IN INCHES
+C           LOAD TAPE TYPE: 1 = POLYESTER, 2 = KEVLAR 
+C           TAPE LOAD RATING IN POUNDS
+C           NUMBER OF LOAD TAPES 
+
+Understanding what each variable was formatted as:
+P,     KEY, CONST, CODEF, FTHICK, CODET, TLR,   NT 
+F10.0, I10, F10.0, I10,   F10.4,  I10,   F10.0, I10  
+
+
+vvvvvv  THIS WORKS vvvvv
+0000003000         10000060000         10000000001         100000010000000000020
+^^^^^^  THIS WORKS ^^^^^
+
+C      2 "SECOND” CARD INPUTS ARE AS FOLLOWS:
+C           TOP LOAD IN POUNDS (+) UP, (-) DOWN
+C           STRESS CONSTANT TAU0 (USUALLY 0.00)
+C           STRESS CONSTANT TAU1 (USUALLY 0.00) 
+C           SUPERPRESSURE 10.00 FUR NATURAL SHAPE)
+C           PRINT INCHEMENT N (0 FOR STANDARD OUTPUT)
+C           NUN-DIMENSIONAL GORE INCREMENT DSO
+C           NON-DIMENSIONAL GORE LENGTH TO CAP STARTING LOCATION CSTART
+C           FILM THICKNESS INCLUDING CAP IN INCHES
+
+
+TL,     TAU0,   TAU1,   ALPHA,  N,    DSO,    CSTART, CAP
+F10.2,  F10.2,  F10.2,  F10.2,  I10,  F10.2,  F10.2,  F10.4
+
+100     0.00    0.00    2       2     5       5       2
+
+         V         V         V         V         V         V         V         V
+00000001000000000000000000000000000000050000000002000000000500000000050000000002             
+                                                  
