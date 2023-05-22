@@ -1,5 +1,5 @@
 # BALDE-Balloon-Design
-Zero Pressure Balloon design program in FORTRAN IVX, orig by James Rand, 1978
+Zero Pressure Balloon design program in (assumed to be) FORTRAN IVX, orig by James Rand, 1978
 
 Adapted to run on the [CDC 6500 mainframe in FORTRAN IV Extended at Living Computer Museum](https://wiki.livingcomputers.org/doku.php?id=cdc6500_survival_guide).  The computer is remotely 
 terminal accessible via the link, where the code can be run.
