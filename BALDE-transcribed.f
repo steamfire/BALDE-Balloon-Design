@@ -62,7 +62,7 @@ C      CONVERGE
 
 
 
-LEVEL    21                 MAIN            DATE = 78226        12/29/42
+C LEVEL    21                 MAIN            DATE = 78226        12/29/42
 
 *************************************************************************
 *************************************************************************
@@ -119,7 +119,7 @@ C
 
 
 
-LEVEL    21              DESIGN                 DATE = 78226 21/29/42
+C LEVEL    21              DESIGN                 DATE = 78226 21/29/42
 
     SUBRCUTINE DESIGN (P.KEY.CONST.CODEF, FTHICK, CODEF, TLR.NT, TL,TAUD.
    STAUI. ALPHA.N.DSC.CSTART.CAP.GP,GW.WBAL KEY2.5)
@@ -184,7 +184,7 @@ C
 
 
 
-LEVEL 21                DESIGN            DATE = 78226   21/29/42
+C LEVEL 21                DESIGN            DATE = 78226   21/29/42
 
 
      WRITE(6,601) (CRD1 (1) I=1.3),FTHICK.SIGMA,TAJD. (WORD2(1), 1=1,3).
@@ -249,7 +249,7 @@ C-------------------------------------------------------------------
 
 
 
-LEVEL 21                    DESIGN                DATE 78226 21/29/42
+C LEVEL 21                    DESIGN                DATE 78226 21/29/42
 
 
       Y(1)=THETA
@@ -312,7 +312,7 @@ C     COMPUTE AND PRINT FINAL QUANTITIES
 
 
 
-LEVEL 21                     DESIGN            DATE = 78220 21/29/42
+C LEVEL 21                     DESIGN            DATE = 78220 21/29/42
 
 
 
@@ -378,7 +378,7 @@ C      CHECK IF OVER THE SHOULDER OF THE BALLOON
 
 
 
-LEVEL 21              DESIGN                DATE = 78226 21/29/42
+C LEVEL 21              DESIGN                DATE = 78226 21/29/42
 
 
 C     IF SO CHECK IF WITHIN DS OF THE TOP
@@ -441,7 +441,7 @@ C     PROCEED TO THE NEXT SET OF DATA
 
 
 
-LEVEL 21               DESIGN                 DATE = 78226 21/29/42
+C LEVEL 21               DESIGN                 DATE = 78226 21/29/42
 
 
    17 IF((ABS(THETA)-3.1416).LT.0.0) GO TO 12
@@ -478,7 +478,7 @@ C
 
 
 
-LEVEL 21                     MATL            DATE = 78226 21/29/42
+C LEVEL 21                     MATL            DATE = 78226 21/29/42
 
       SUBROUTINE MATL(P,KEY,CONST,CODEF.FTHICK,CODET,TLR,NT,CAP,SIGMA,
       $CSIGMA,TSIGMA,KT,EM,EC,EMC,LAMBDA,TSIGMB)
@@ -542,7 +542,7 @@ C     THIS PROGRAM ASSUMES A POISSON'S RATIO OF 0.50
 
 
 
-LEVEL 21               MATL               DATE = 78226  21/29/42
+C LEVEL 21               MATL               DATE = 78226  21/29/42
 C
       EM = (EFILM*FTHICK*12.)/(B*(LAMEDA**2))
       EC = EM
@@ -574,7 +574,7 @@ C
 
 
 
-LEVEL   21                  ATMOS            DATE = 78226   21/29/42
+C LEVEL   21                  ATMOS            DATE = 78226   21/29/42
 
       SUBROUTINE ATMOS (H,TA,PA,RHOA,B,IAM,GXPAN,TOHIGH)
 C
@@ -638,7 +638,7 @@ C
 
 
 
-LEVEL 21               ATMOS            DATE = 70226    21/29/42
+C LEVEL 21               ATMOS            DATE = 70226    21/29/42
 
        TB=216.65
        LP=0.0010
@@ -673,7 +673,7 @@ LEVEL 21               ATMOS            DATE = 70226    21/29/42
 
 
 
-LEVEL 21      ATMOS2            DATE= 78226 21/29/42
+C LEVEL 21      ATMOS2            DATE= 78226 21/29/42
 
       SUBROUTINE ATMOS2(PA,H,TA,RHOA,B,IAM,GXPAN,TOHIGH)
 C
@@ -734,7 +734,7 @@ C
          TB=270.65
 
 
-LEVEL 21                    ATMOS2                 DATE = 76226 21/29/42
+C LEVEL 21                    ATMOS2                 DATE = 76226 21/29/42
 
          LP=0.C
          RHOB=0.0014275
@@ -770,7 +770,7 @@ LEVEL 21                    ATMOS2                 DATE = 76226 21/29/42
 
 
 
-LEVEL 21            BOYNCY        DATE = 78226       21/29/42
+C LEVEL 21            BOYNCY        DATE = 78226       21/29/42
        SUBROUTINE BOYNCY (B.PA.IGAS.TOHIGH)
 C
 C
@@ -832,7 +832,7 @@ C
 
 
 
-LEVEL 21       BUYNCY              DATE 78226         21/29/42
+C LEVEL 21       BUYNCY              DATE 78226         21/29/42
 
       XLP=0.0010
       PB=54.749
@@ -878,7 +878,7 @@ LEVEL 21       BUYNCY              DATE 78226         21/29/42
       END
 
 
-LEVEL 21              GLAGTH                   DATE = 78226     21/29/42
+C LEVEL 21              GLAGTH                   DATE = 78226     21/29/42
 
        SUBROUTINE GLNGTH(GP,SLMDA,INDIC)
 C
@@ -941,7 +941,7 @@ C
 
 
 
-LEVEL 21                GLAGTH              DATE = 78226   21/29/42
+C LEVEL 21                GLAGTH              DATE = 78226   21/29/42
 
       A=1.92864
       B=0.320819
@@ -1002,7 +1002,7 @@ LEVEL 21                GLAGTH              DATE = 78226   21/29/42
       B=0.315C67
       GO TO 95
 
-LEVEL 21                GLNGTH         DATE = 78226  21/29/42
+C LEVEL 21                GLNGTH         DATE = 78226  21/29/42
 
    79 IF(SLMDA.GE.3.19819)GO TO 80
       A=1.93701
